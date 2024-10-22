@@ -1,0 +1,29 @@
+class Mobil {
+  String merk;
+  int tahun;
+  Mobil(this.merk, this.tahun);
+
+  void tampilkanInfo(String warna, String jenisBahanBakar, double kecepatan) {
+    print("Informasi Mobil:");
+    print("Merk: $merk"); 
+    print("Tahun: $tahun");
+    print("Warna: $warna");
+    print("Jenis Bahan Bakar: $jenisBahanBakar");
+    print("Kecepatan Maksimal: ${kecepatan}km/h");
+  }
+
+  void perhitunganJarak(double waktu, double kecepatan, double konsumsiBahanBakar) {
+    double jarak = waktu * kecepatan;
+    double bahanBakarDibutuhkan = jarak / konsumsiBahanBakar;
+    print("\nPerhitungan Jarak dan Bahan Bakar:");
+    print("Jarak yang ditempuh: ${jarak} km");
+    print("Bahan bakar yang dibutuhkan: ${bahanBakarDibutuhkan} liter");
+  }
+}
+
+void main() {
+  Mobil mobilSaya = Mobil('Toyota', 2020);
+
+  mobilSaya.tampilkanInfo('Merah', 'Bensin', 180.0);
+  mobilSaya.perhitunganJarak(2.5, 120.0, 15.0);
+}
